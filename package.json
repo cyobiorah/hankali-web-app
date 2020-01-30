@@ -22,7 +22,8 @@
     "react-notification-alert": "0.0.8",
     "react-router-dom": "4.3.1",
     "react-scripts": "2.0.4",
-    "reactstrap": "6.5.0"
+    "reactstrap": "6.5.0",
+    "yarn.lock": "^0.0.1-security"
   },
   "scripts": {
     "start": "node server.js",
