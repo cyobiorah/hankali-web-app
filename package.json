@@ -2,14 +2,17 @@
   "name": "black-dashboard-react",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://creativetimofficial.github.io/black-dashboard-react/#/dashboard",
+  "homepage": "https://cyobiorah.github.io/hankali-web-app/#/dashboard",
   "dependencies": {
     "@types/react": "16.4.16",
     "bootstrap": "4.1.3",
     "chart.js": "^2.7.2",
     "classnames": "2.2.6",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
     "history": "4.7.2",
     "node-sass": "4.13.1",
+    "path": "^0.12.7",
     "perfect-scrollbar": "1.4.0",
     "prop-types": "^15.6.2",
     "react": "16.5.2",
@@ -22,12 +25,15 @@
     "reactstrap": "6.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
+    "start-local": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "compile-scss": "node-sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.css"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start-local",
+    "compile-scss": "node-sass src/assets/scss/black-dashboard-react.scss src/assets/css/black-dashboard-react.css",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,5 +43,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
 }
