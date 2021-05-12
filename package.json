@@ -6,7 +6,7 @@
   "dependencies": {
     "@types/react": "16.4.16",
     "bootstrap": "4.4.1",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "classnames": "2.2.6",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
